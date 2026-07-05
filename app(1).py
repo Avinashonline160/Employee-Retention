@@ -21,3 +21,16 @@ y=df["left"]; le=LabelEncoder(); X["salary"]=le.fit_transform(X["salary"])
 Xtr,Xte,Ytr,Yte=train_test_split(X,y,test_size=0.3,random_state=42)
 m=LogisticRegression(max_iter=1000); m.fit(Xtr,Ytr)
 st.success(f"Accuracy: {accuracy_score(Yte,m.predict(Xte))*100:.2f}%")
+st.markdown("---")
+st.markdown(
+    """
+    <div style="text-align:center">
+        <h4>Employee Retention Prediction</h4>
+        <p>Developed by <b>Avinash Patel</b></p>
+        <a href="https://github.com/Avinashonline160/Employee-Retention" target="_blank">
+            View Project on GitHub
+        </a>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
